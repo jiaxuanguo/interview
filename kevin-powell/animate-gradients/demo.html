@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    :root {
+        --gradient: linear-gradient(
+                45deg,
+                #845ec2,
+                #d65db1,
+                #ff6f91,
+                #ff9671,
+                #ffc75f,
+                #f9f871
+        );
+    }
+    body {
+        font-family: basic-sans, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.125em;
+        line-height: 1.6;
+        color: #333;
+        background: #ddd;
+        background-size: 400%;
+        background-image: var(--gradient);
+        animation: bg 15s infinite alternate;
+    }
+    @keyframes bg {
+        0% {
+            background-position: left;
+        }
+        100% {
+            background-position: right;
+        }
+    }
+    .content {
+        background: white;
+        width: 70vw;
+        padding: 3em;
+        box-shadow: 0 0 3em rgba(0,0,0,.15);
+    }
+    .title {
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-style: italic;
+        font-size: 6rem;
+        color: #ee6352;
+        line-height: .8;
+        background-image: var(--gradient);
+        -webkit-background-clip: text;
+        color: transparent;
+        background-size: 400%;
+        animation: bg 5s infinite alternate;
+    }
+    .fun {
+        border: 0;
+        padding: 0.5rem 1.5rem;
+        font-size: 2rem;
+        background-image: var(--gradient);
+        background-size: 300%;
+        background-position: left;
+        transition: background-position 1s;
+        cursor: pointer;
+    }
+    .fun:hover, .fun:focus {
+        background-position: right;
+    }
+</style>
+<body>
+    <div class="content">
+        <h1 class="title">Animating gradients</h1>
+<!--        <button class="fun">Hover me!</button>-->
+    </div>
+</body>
+</html>
