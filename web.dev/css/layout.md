@@ -1,0 +1,25 @@
+## [Layout](https://web.dev/learn/css/layout/)
+
+- historically, complex layouts were implemented with `table`s; this was obviously a misuse of the element
+- evolution through time: float/table -> media query -> flex -> grid -> container query
+- `display` property does two things: determine whether the element is block or inline, and how its children should behave
+- inline element has no explicit height and width, as well as block-level padding and margin
+- block element creates a new line and occupies the whole line, unless styled otherwise by css
+- flexbox is used for one-dimensional layouts
+  - `justify-content` determines how children will be aligned along the main axis 
+  - `align-items` determines how children will be aligned along the cross axis
+  - `flex-wrap` determines what to do when there is no space to place all children in a single line
+  - `flex-grow`, `flex-shrink` and `flex-basis` determine how flex items resize
+- grid is like a two-dimensional flexbox
+  - `grid-template-columns` and `grid-template-rows` determine sizes of the columns and rows
+  - `grid-row` and `grid-column` determine how grid items span across rows and columns
+- if `display` is not set to `flex` or `grid`, elements display in the normal flow
+- `inline-block` creates a block element that flows inline
+- > the float property instructs an element to "float" to the direction specified.
+  - any elements following the floated element may have their layout adjusted; add `clear: both` on it or `display: flow-root` on the parent to prevent this
+- enable multi-column layout be setting a `column-count` or `column-width`
+- `postion` property:
+  - defaults to `static`, which means the element will follow the normal content flow
+  - set to `relative` to provide a context for `position: absolute` or to *translate* it from its normal position in the flow
+  - elements set to `absolute` or `fixed` will be removed from the normal flow; set their positions explicitly with `top`, `left`, `right` and `bottom`
+  - `sticky` is an advanced `fixed` that behavior like `static` when the original position is still inside the viewport
