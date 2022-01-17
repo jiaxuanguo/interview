@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.125em;
+            line-height: 1.6;
+            color: black;
+            background-color: gray;
+        }
+        .content {
+            background-color: white;
+            padding: 3em;
+            box-shadow: 0 0 3em rgba(0,0,0,0.15);
+            /*width: 70%;*/
+            /*max-width: 600px;*/
+            width: max(70%, 600px);
+        }
+        .title {
+            margin: 0 0 0.5em;
+            font-weight: 900;
+            color: red;
+        }
+        p {
+            background-color: blue;
+            /*width: 50%;*/
+            /*width: clamp(300px, 50%, 20rem);*/
+            font-size: clamp(1em, 2vw, 2em);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 class="title">A catchy title here</h1>
+        <p>CSS has come a long way, but min(), max(), and clamp() make a lot of things a lot easier than they used to be, and really open up the world of responsive typography like we never had before! Clamp() is the ingredient that we've needed for a long time to really be able to make type fully responsive in our CSS, and to be able to do it on one line is absolute magic!
+
+            Until Safari gets there too, we can use it, but with the help of feature queries, which I made a video on here: https://youtu.be/wPI8CEoheSk</p>
+    </div>
+</body>
+</html>
