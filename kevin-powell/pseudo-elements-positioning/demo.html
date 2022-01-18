@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.125em;
+            line-height: 1.6;
+            color: black;
+            background-color: gray;
+        }
+        .content {
+            background-color: white;
+            padding: 3em;
+            box-shadow: 0 0 3em rgba(0,0,0,0.15);
+            width: 70vw;
+            max-width: 600px;
+
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(4, min-content);
+            position: relative;
+        }
+        .title {
+            margin: 0;
+            font-size: 5rem;
+            line-height: 1;
+            font-weight: 900;
+            color: red;
+            grid-column: 1 / -1;
+            grid-row: 1 / 4;
+        }
+        .title::before,
+        .title::after {
+            content: '';
+            position: absolute;
+        }
+        .title::before {
+            background-color: currentColor;
+            inset: 0 0 0 0;
+            grid-column: 4 / -1;
+            grid-row: 3 / 4;
+        }
+        .title::after {
+            background-color: teal;
+            width: 1rem;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            grid-row: 1 / -1;
+        }
+        p {
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <h1 class="title">Pseudo-elements positioning on steroids</h1>
+    <p>CSS has come a long way, but min(), max(), and clamp() make a lot of things a lot easier than they used to be, and really open up the world of responsive typography like we never had before! Clamp() is the ingredient that we've needed for a long time to really be able to make type fully responsive in our CSS, and to be able to do it on one line is absolute magic!
+        Until Safari gets there too, we can use it, but with the help of feature queries, which I made a video on here: https://youtu.be/wPI8CEoheSk</p>
+</div>
+</body>
+</html>
