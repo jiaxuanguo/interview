@@ -5,3 +5,4 @@
 - `postion` has to be set to anything other than `static` for `z-index` to be effective
 - > A stacking context is a group of elements that have a common parent and move up and down the z axis together.
 - the `z-index` is relative to the base of the current stacking context
+- certain css [properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) create stacking contexts
